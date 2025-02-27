@@ -27,3 +27,9 @@ const validEmails = [
 
 
 const inputEmail = prompt('Inserisci la tua email per l\'identificazione');
+
+
+let isValidEmail = false;
+validEmails.forEach(email => {
+  if (validEmails.indexOf(inputEmail) >= 0) isValidEmail = true;
+});
