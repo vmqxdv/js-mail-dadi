@@ -20,7 +20,12 @@ const userDiceResult = getRandomNumber(minRoll, maxRoll);
 const computerDiceResult = getRandomNumber(minRoll, maxRoll);
 
 
+const winnerText = 
+  userDiceResult > computerDiceResult ? `${userName} vince con un ${userDiceResult}!\n\nContro il ${computerDiceResult} di Computer.` :
+  computerDiceResult > userDiceResult ? `Computer vince con un ${computerDiceResult}!\n\nContro il ${userDiceResult} di ${userName}.` :
+  `Pareggio!`;
 
+alert(winnerText);
 
 function getRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
