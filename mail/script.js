@@ -25,3 +25,5 @@ const validEmails = [
   'valeriodibiagio@gmail.com',
 ];
 
+
+const inputEmail = prompt('Inserisci la tua email per l\'identificazione');
