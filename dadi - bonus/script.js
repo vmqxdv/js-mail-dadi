@@ -21,6 +21,8 @@ let userWins = 0;
 let computerWins = 0;
 let tie = 0;
 
+let totalMatchesNum = 0;
+
 while (!stopLoop) {
   const userDiceResult = Number(prompt('Inserisci un numero da 1-6 per provare a battere il Computer:'));
 
@@ -46,6 +48,7 @@ while (!stopLoop) {
   
   alert(winnerText);
 
+  totalMatchesNum += 1;
   stopLoop = !confirm('Vuoi giocare ancora?');
 };
 
@@ -55,7 +58,9 @@ const overallWinner =
   computerWins > userWins ? 'Computer' :
   'Pareggio';
 
-alert(`Punteggio finale:\n\n${userName}: ${userWins}\nComputer: ${computerWins}\nPareggi: ${tie}\n\nNumero di match: ${userWins + computerWins + tie}\n\nVincitore: ${overallWinner === 'Pareggio' ? 'Pareggio' : overallWinner}`)
+alert(
+  `Punteggio finale:\n\n${userName}: ${userWins}\nComputer: ${computerWins}\nPareggi: ${tie}\n\nNumero di match: ${totalMatchesNum}\n\nVincitore: ${overallWinner === 'Pareggio' ? 'Pareggio' : overallWinner}`
+)
 
 
 function getRandomNumber(min, max) {
