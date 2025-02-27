@@ -26,14 +26,17 @@ const validEmails = [
 ];
 
 
-const inputEmail = prompt('Inserisci la tua email per l\'identificazione');
+let inputEmail;
+let isValidEmail = false;
 
+while (!isValidEmail) {
+  inputEmail = prompt('Inserisci la tua email per l\'identificazione');
 
-let isValidEmail = validEmails.indexOf(inputEmail) >= 0;
+  isValidEmail = validEmails.indexOf(inputEmail) >= 0;
 
-
-if (!isValidEmail) {
-  alert(`"${inputEmail}" non è presente nella lista degli invitati.`);
-  throw new Error(`"${inputEmail}" is not a valid email.`)
+  if (!isValidEmail) {
+    alert(`"${inputEmail}" non è presente nella lista degli invitati. Riprova.`);
+  };
 };
 
+alert('Email corretta!');
