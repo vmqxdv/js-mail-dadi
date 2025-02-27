@@ -13,3 +13,13 @@
 
 
 const userName = prompt('Inserisci un username:');
+const userDiceResult = getRandomNumber(1, 6);
+
+const computerDiceResult = getRandomNumber(1, 6);
+
+
+
+
+function getRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
