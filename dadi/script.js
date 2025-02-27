@@ -11,11 +11,13 @@
 
 */
 
+const minRoll = 1;
+const maxRoll = 6;
 
 const userName = prompt('Inserisci un username:');
-const userDiceResult = getRandomNumber(1, 6);
+const userDiceResult = getRandomNumber(minRoll, maxRoll);
 
-const computerDiceResult = getRandomNumber(1, 6);
+const computerDiceResult = getRandomNumber(minRoll, maxRoll);
 
 
 
