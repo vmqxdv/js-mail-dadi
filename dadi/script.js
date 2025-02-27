@@ -28,16 +28,16 @@ while (!stopLoop) {
   
   const computerDiceResult = getRandomNumber(minRoll, maxRoll);
   
-  let winnerText;
+  let winnerText = `Match N. ${totalMatchesNum}\n\n`;
 
   if (userDiceResult > computerDiceResult) {
-    winnerText = `${userName} vince con un ${userDiceResult}!\n\nContro il ${computerDiceResult} di Computer.`;
+    winnerText += `${userName} vince con un ${userDiceResult}!\n\nContro il ${computerDiceResult} di Computer.`;
     userWins += 1;
   } else if (computerDiceResult > userDiceResult) {
-    winnerText = `Computer vince con un ${computerDiceResult}!\n\nContro il ${userDiceResult} di ${userName}.`;
+    winnerText += `Computer vince con un ${computerDiceResult}!\n\nContro il ${userDiceResult} di ${userName}.`;
     computerWins += 1;
   } else {
-    winnerText = 'Pareggio!';
+    winnerText += 'Pareggio!';
     tie += 1;
   };
   
